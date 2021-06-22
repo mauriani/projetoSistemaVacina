@@ -110,6 +110,7 @@ class Vacina {
 
   public void addVacina(){
 
+  
     this.listVacinas = new List<Vacina>();
 
     this.listVacinas.Add(new Vacina() {

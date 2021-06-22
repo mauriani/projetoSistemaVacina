@@ -1,9 +1,8 @@
-CREATE TABLE vacinas (
-	codigo serial PRIMARY KEY,
-	nome_Vacina VARCHAR (50) UNIQUE NOT NULL,
-  tipo_Vacina VARCHAR (50) UNIQUE NOT NULL,
-  validade date,
-	temp_Armazenamento VARCHAR (10) NOT NULL,
-  temp_Descongelamento VARCHAR (10) NOT NULL,
-	created_on TIMESTAMP NOT NULL,      
+CREATE TABLE vacinas(
+	codigo serial primary key,
+	nome_vacina VARCHAR(255) NOT NULL,
+	tipo_vacina VARCHAR(500) NOT NULL,
+  temp_armazenamento integer NOT NULL,
+  temp_armazenamento integer NOT NULL,
+	validade date
 );

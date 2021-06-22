@@ -44,8 +44,6 @@ namespace sistemaVacina
             vacina.setDataValidade(data_vacina);
             vacina.setTempArmazenamento(armazenamento_vacina);
             vacina.setTempDescongelamento(descongelamento_vacina);
-            vacina.setEfeitosColaterais(efeitos_vacina);
-            vacina.setReacoesAlergicas(reacoes_vacina);
            
             vacina.addVacina();
 
