@@ -1,0 +1,11 @@
+C:\Users\cedtec\Desktop\AEDI\sistemaVacina\bin\Debug\netcoreapp2.1\sistemaVacina.deps.json
+C:\Users\cedtec\Desktop\AEDI\sistemaVacina\bin\Debug\netcoreapp2.1\sistemaVacina.runtimeconfig.json
+C:\Users\cedtec\Desktop\AEDI\sistemaVacina\bin\Debug\netcoreapp2.1\sistemaVacina.runtimeconfig.dev.json
+C:\Users\cedtec\Desktop\AEDI\sistemaVacina\bin\Debug\netcoreapp2.1\sistemaVacina.dll
+C:\Users\cedtec\Desktop\AEDI\sistemaVacina\bin\Debug\netcoreapp2.1\sistemaVacina.pdb
+C:\Users\cedtec\Desktop\AEDI\sistemaVacina\obj\Debug\netcoreapp2.1\sistemaVacina.csprojAssemblyReference.cache
+C:\Users\cedtec\Desktop\AEDI\sistemaVacina\obj\Debug\netcoreapp2.1\sistemaVacina.csproj.CoreCompileInputs.cache
+C:\Users\cedtec\Desktop\AEDI\sistemaVacina\obj\Debug\netcoreapp2.1\sistemaVacina.AssemblyInfoInputs.cache
+C:\Users\cedtec\Desktop\AEDI\sistemaVacina\obj\Debug\netcoreapp2.1\sistemaVacina.AssemblyInfo.cs
+C:\Users\cedtec\Desktop\AEDI\sistemaVacina\obj\Debug\netcoreapp2.1\sistemaVacina.dll
+C:\Users\cedtec\Desktop\AEDI\sistemaVacina\obj\Debug\netcoreapp2.1\sistemaVacina.pdb
