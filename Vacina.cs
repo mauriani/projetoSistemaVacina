@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 
+
 class Vacina {
 
   public Vacina(){}
@@ -14,7 +15,6 @@ class Vacina {
   private string efeitosColaterais;
 
   private string reacoesAlergicas;
-
   List<Vacina> listVacinas;
 
   public Vacina(string cod, string data, string tipo, string nome, int tempArm, int tempDesc, string efeitos, string alergia){
@@ -110,7 +110,6 @@ class Vacina {
 
   public void addVacina(){
 
-  
     this.listVacinas = new List<Vacina>();
 
     this.listVacinas.Add(new Vacina() {
