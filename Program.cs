@@ -39,6 +39,9 @@ namespace sistemaVacina
             Console.WriteLine("Possui reações alérgicas ? : ");
             string reacoes_vacina = Console.ReadLine();
 
+            Console.WriteLine("Informe a quantidade ? : ");
+            int quant = int.Parse(Console.ReadLine());
+
             listVacinas.Add( new Vacina () {
                     codigo = cod_vacina, 
                     nomeVacina = nome_vacina, 
@@ -47,7 +50,8 @@ namespace sistemaVacina
                     temperaturaAmarzenamento = armazenamento_vacina,
                     temperaturaDescongelamento = descongelamento_vacina,
                     efeitosColaterais = efeitos_vacina,
-                    reacoesAlergicas = reacoes_vacina
+                    reacoesAlergicas = reacoes_vacina,
+                    quantidade = quant,
                 });
            
         

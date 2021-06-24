@@ -1,5 +1,5 @@
 using System;
-class Estoque
+class Estoque: Vacina
 {
 
    public void controlarTemperatura(){
@@ -10,16 +10,14 @@ class Estoque
      
    }
 
-   public string verificarFaltas(){
-     return "teste";
+   public void verificarFaltas(){
+     
    }
 
-   public int verificarVencidas(){
-     return 1;
+   public void verificarVencidas(){
+   
    }
-    public int verificarRetiradas(){
-
-      return 1;
+    public void verificarRetiradas(){
 
     }
 }

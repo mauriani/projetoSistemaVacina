@@ -21,7 +21,10 @@ class Vacina {
 
   public string reacoesAlergicas { get; set; }
 
-    public override string ToString(){
+  public int quantidade {get; set;}
+
+
+  public override string ToString(){
     return 
     "Codigo: " + this.codigo + "\n" +
     "Nome: " + this.nomeVacina + "\n" +
@@ -30,7 +33,8 @@ class Vacina {
     "Temperatura de Armazenamento: " + this.temperaturaAmarzenamento + "\n" +
     "Temperatura de descongelamento: " + this.temperaturaDescongelamento + "\n" +
     "Tem efeitos colaterais: " + this.efeitosColaterais + "\n" +
-    "Reações Alergicas: " + this.reacoesAlergicas + "\n" ;
+    "Reações Alergicas: " + this.reacoesAlergicas + "\n" +
+    "Quantidades" +  this.quantidade;
   }
  
 
