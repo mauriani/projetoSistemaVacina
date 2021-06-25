@@ -3,6 +3,7 @@ class Estoque: Vacina
 {
 
    public void controlarTemperatura(){
+    int teste = temperaturaAmarzenamento;
 
    }
 

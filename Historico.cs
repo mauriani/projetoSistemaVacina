@@ -1,25 +1,6 @@
 using System;
-class Historico
+class Historico: Vacina
 {
-    private int quantidade;
-
-
-    public Historico(int quant){
-      quantidade = quant;
-    }
-
-
-    public void setQuantidade(int quant){
-    
-    quantidade = quant;
-    
-    }
-    
-    public int getQuantidade(){ 
-      return quantidade;
-      
-    }
-
     public void maisAplicadas(){
 
     }
