@@ -9,12 +9,12 @@ namespace sistemaVacina
         {
            
             Console.WriteLine("Cadastrar vacina? 1-Sim, 0-Não ");
-            int adicionar = int.Parse(Console.ReadLine());
+            int addVacina = int.Parse(Console.ReadLine());
 
             List<Vacina> listVacinas  = new List<Vacina>();
            
 
-           while(adicionar == 1){
+           while(addVacina == 1){
 
             string cod_vacina  = System.Guid.NewGuid().ToString();
                
@@ -56,7 +56,59 @@ namespace sistemaVacina
            
         
             Console.WriteLine("Cadastrar vacina? 1-Sim, 0-Não ");
-            adicionar = int.Parse(Console.ReadLine());
+            addVacina = int.Parse(Console.ReadLine());
+          
+           }
+
+
+            Console.WriteLine("Cadastrar Pacientes? 1-Sim, 0-Não ");
+            int addPaciente = int.Parse(Console.ReadLine());
+
+            List<Paciente> listaPacientes  = new List<Paciente>();
+           
+
+           while(addPaciente == 1){
+
+            Console.WriteLine("Informe o número do cartão de vacina: ");
+            string cartao_vacina = Console.ReadLine();
+               
+            Console.WriteLine("Informe o nome completo: ");
+            string nome_completo = Console.ReadLine();
+           
+            Console.WriteLine("Informe o cpf do Paciente: ");
+            string cpf_paciente = Console.ReadLine();
+           
+            Console.WriteLine("Informe a idade do paciente: ");
+            int idade_paciente = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Informe o nome da vacina que vai ser aplicada: ");
+            string nome_vacina_paciente = Console.ReadLine();
+
+            Console.WriteLine("Informe a dose da vacina: ");
+            int dose_vacina_paciente = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Informe o email do paciente: ");
+            string email_paciente = Console.ReadLine();
+
+            Console.WriteLine("Informe o número de telefone: ");
+            string telefone_paciente = Console.ReadLine();
+           
+          
+            listaPacientes.Add( new Paciente () {
+                numeroCartaoVacina = cartao_vacina,
+                nome = nome_completo,
+                cpf = cpf_paciente,
+                idade = idade_paciente,
+                vacina = nome_vacina_paciente,
+                dose=dose_vacina_paciente,
+                email = email_paciente,
+                telefone= telefone_paciente
+
+                });
+           
+        
+            Console.WriteLine("Cadastrar Pacientes? 1-Sim, 0-Não ");
+            addPaciente = int.Parse(Console.ReadLine());
           
            }
         }

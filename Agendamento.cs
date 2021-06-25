@@ -1,6 +1,6 @@
 
 using System;
-class Agendamento {
+class Agendamento: Vacina{
 
   public Agendamento(){}
 

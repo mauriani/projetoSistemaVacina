@@ -4,7 +4,7 @@ class Paciente {
 
   public Paciente(){}
 
-  public string cartaoVacina { get; set; }
+  public string numeroCartaoVacina { get; set; }
 
   public string nome { get; set; }
 
@@ -12,7 +12,7 @@ class Paciente {
 
   public int idade { get; set; }
 
-  public int vacina { get; set; }
+  public string vacina { get; set; }
 
   public int dose { get; set; }
 
@@ -24,7 +24,7 @@ class Paciente {
 
   public override string ToString(){
     return 
-    "Cartão de Vacina: " + this.cartaoVacina + "\n" +
+    "Cartão de Vacina: " + this.numeroCartaoVacina + "\n" +
     "Nome completo: " + this.nome + "\n" +
     "CPF: "+ this.cpf + "\n" +
     "Idade: " + this.idade + "\n" +
