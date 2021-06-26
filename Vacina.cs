@@ -1,5 +1,8 @@
+using System.Collections.Generic;
 
 using System;
+
+[Serializable]
 class Vacina {
 
   public Vacina(){}
@@ -34,8 +37,8 @@ class Vacina {
     "Temperatura de descongelamento: " + this.temperaturaDescongelamento + "\n" +
     "Tem efeitos colaterais: " + this.efeitosColaterais + "\n" +
     "Reações Alergicas: " + this.reacoesAlergicas + "\n" +
-    "Quantidades" +  this.quantidade;
+    "Quantidades: " +  this.quantidade;
   }
- 
+
 
 }
