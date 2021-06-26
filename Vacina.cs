@@ -26,6 +26,10 @@ class Vacina {
 
   public int quantidade {get; set;}
 
+  public int mes {get; set;}
+
+  public int ano {get; set;}
+
 
   public override string ToString(){
     return 
@@ -37,7 +41,9 @@ class Vacina {
     "Temperatura de descongelamento: " + this.temperaturaDescongelamento + "\n" +
     "Tem efeitos colaterais: " + this.efeitosColaterais + "\n" +
     "Reações Alergicas: " + this.reacoesAlergicas + "\n" +
-    "Quantidades: " +  this.quantidade;
+    "Quantidades: " +  this.quantidade + "\n" +
+    "Mes de Cadastro" + this.mes + "\n" +
+    "Ano de Cadastro" + this.ano;
   }
 
 

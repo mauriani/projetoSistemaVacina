@@ -13,6 +13,8 @@ namespace sistemaVacina
             List<Vacina> listVacinas  = new List<Vacina>();
 
             Estoque estoque = new Estoque();
+
+            Historico historico = new Historico();
            
 
            while(addVacina == 1){
@@ -43,6 +45,14 @@ namespace sistemaVacina
             Console.WriteLine("Informe a quantidade ? : ");
             int quant = int.Parse(Console.ReadLine());
 
+            Console.WriteLine("Informe o MES que esta vacina esta sendo cadastrada ? : ");
+            int mes_vacina = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Informe o ANO que esta vacina esta sendo cadastrada ? : ");
+            int ano_vacina = int.Parse(Console.ReadLine());
+
+
+
             listVacinas.Add( new Vacina () {
                     codigo = cod_vacina, 
                     nomeVacina = nome_vacina, 
@@ -53,6 +63,8 @@ namespace sistemaVacina
                     efeitosColaterais = efeitos_vacina,
                     reacoesAlergicas = reacoes_vacina,
                     quantidade = quant,
+                    mes= mes_vacina,
+                    ano = ano_vacina
                 });
                 
                 
@@ -82,7 +94,13 @@ namespace sistemaVacina
 
            // verificar vencidas
            estoque.verificarVencidas(listVacinas);
-           
+
+           // historico
+
+           historico.maisAplicadasMes(listVacinas);
+
+
+
            
            Console.WriteLine("Cadastrar Pacientes? 1-Sim, 0-Não ");
            int addPaciente = int.Parse(Console.ReadLine());

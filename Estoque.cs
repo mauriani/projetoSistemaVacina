@@ -55,7 +55,9 @@ class Estoque: Vacina
         } 
 
    
-   }public void verificarRetiradas(){
+   }
+   
+   /*public void verificarRetiradas(){
 
-    }
+    }*/
 }
