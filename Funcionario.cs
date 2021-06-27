@@ -6,6 +6,8 @@ class Funcionario {
 
   public string codigo_funcionario { get; set; }
 
+  public string nome_funcionario {get; set;}
+
   public string crm { get; set; }
 
   public string crb { get; set; }

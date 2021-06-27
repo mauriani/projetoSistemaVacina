@@ -12,9 +12,13 @@ namespace sistemaVacina
 
             List<Vacina> listVacinas  = new List<Vacina>();
 
+            List<Agendamento> dadosAgendamento  = new List<Agendamento>();
+
             Estoque estoque = new Estoque();
 
             Historico historico = new Historico();
+
+            Agendamento agendamento = new Agendamento();
            
 
            while(addVacina == 1){
@@ -66,11 +70,14 @@ namespace sistemaVacina
                     mes= mes_vacina,
                     ano = ano_vacina
                 });
-                
+
+           foreach(var i in listVacinas){
+                    Console.WriteLine(i);
+            }
                 
             // verifica temperatura ideal
-            // estoque.controlarTemperatura();
-           
+            estoque.controlarTemperatura();
+
     
             Console.WriteLine("Cadastrar vacina? 1-Sim, 0-Não ");
             addVacina = int.Parse(Console.ReadLine());
@@ -99,9 +106,60 @@ namespace sistemaVacina
 
            historico.maisAplicadasMes(listVacinas);
 
+            Console.WriteLine("Cadastrar Funcionário? 1-Sim, 0-Não ");
+            int addFuncionario = int.Parse(Console.ReadLine());
 
-
+            List<Funcionario> listaFuncionarios  = new List<Funcionario>();
            
+
+           while(addFuncionario == 1){
+
+            string cod_funcionario  = System.Guid.NewGuid().ToString();
+
+            Console.WriteLine("Informe o nome: ");
+            string nome_funcionario = Console.ReadLine();
+               
+
+            Console.WriteLine("Informe o crm: ");
+            string crm_funcionario = Console.ReadLine();
+               
+            Console.WriteLine("Informe o crb: ");
+            string crb_funcionario = Console.ReadLine();
+           
+            Console.WriteLine("Informe o certificado digital: ");
+            string certificado = Console.ReadLine();
+           
+            Console.WriteLine("Informe o telfone: ");
+            string tel_funcionario = Console.ReadLine();
+
+            Console.WriteLine("Informe o e-mail: ");
+            string mail_funcionario = Console.ReadLine();
+
+            Console.WriteLine("Informe a ultima instituição trabalhada: ");
+            string inst_trabalhadas = Console.ReadLine();
+
+          
+            listaFuncionarios.Add( new Funcionario () {
+                codigo_funcionario = cod_funcionario,
+                nome_funcionario = nome_funcionario,
+                crm = crm_funcionario,
+                crb = crb_funcionario,
+                certificado_digital = certificado,
+                telefone= tel_funcionario,
+                email = mail_funcionario,
+                instituicoes_trabalhadas = inst_trabalhadas,
+            
+                });
+
+            foreach(var i in listaFuncionarios){
+                    Console.WriteLine(i);
+                    
+            }
+        
+            Console.WriteLine("Cadastrar Funcionario? 1-Sim, 0-Não ");
+            addFuncionario = int.Parse(Console.ReadLine());
+
+
            Console.WriteLine("Cadastrar Pacientes? 1-Sim, 0-Não ");
            int addPaciente = int.Parse(Console.ReadLine());
            
@@ -146,58 +204,41 @@ namespace sistemaVacina
                 telefone= telefone_paciente
 
                 });
-           
-        
-            Console.WriteLine("Cadastrar Pacientes? 1-Sim, 0-Não ");
-            addPaciente = int.Parse(Console.ReadLine());
-          
-           }
-
-             Console.WriteLine("Cadastrar Funcionário? 1-Sim, 0-Não ");
-            int addFuncionario = int.Parse(Console.ReadLine());
-
-            List<Funcionario> listaFuncionarios  = new List<Funcionario>();
-           
-
-           while(addFuncionario == 1){
-
-            string cod_funcionario  = System.Guid.NewGuid().ToString();
-
-            Console.WriteLine("Informe o crm: ");
-            string crm_funcionario = Console.ReadLine();
-               
-            Console.WriteLine("Informe o crb: ");
-            string crb_funcionario = Console.ReadLine();
-           
-            Console.WriteLine("Informe o certificado digital: ");
-            string certificado = Console.ReadLine();
-           
-            Console.WriteLine("Informe o telfone: ");
-            string tel_funcionario = Console.ReadLine();
-
-            Console.WriteLine("Informe o e-mail: ");
-            string mail_funcionario = Console.ReadLine();
-
-            Console.WriteLine("Informe a ultima instituição trabalhada: ");
-            string inst_trabalhadas = Console.ReadLine();
-
-          
-            listaFuncionarios.Add( new Funcionario () {
-                codigo_funcionario = cod_funcionario,
-                crm = crm_funcionario,
-                crb = crb_funcionario,
-                certificado_digital = certificado,
-                telefone= tel_funcionario,
-                email = mail_funcionario,
-                instituicoes_trabalhadas = inst_trabalhadas,
             
+            Console.WriteLine("Desejar realizar um agendamento 1-Sim ?");
+            int agendar = int.Parse(Console.ReadLine());
+
+            if(agendar == 1){
+
+                Console.WriteLine("Informe a data de vacinação: ");
+                DateTime data_agendamento = DateTime.Parse(Console.ReadLine());
+
+                Console.WriteLine("Informe o local vacinação: ");
+                String local_agendamento = Console.ReadLine();
+
+                dadosAgendamento.Add(new Agendamento(){
+                    paciente = nome_completo,
+                    dataVacinacao = data_agendamento,
+                    local = local_agendamento,
+                    aplicacaoFuncionario = cod_funcionario,
+
                 });
-           
-        
-            Console.WriteLine("Cadastrar Funcionario? 1-Sim, 0-Não ");
-            addFuncionario = int.Parse(Console.ReadLine());
-          
-           }
+
+            }
+                foreach(var i in listaPacientes){
+                    Console.WriteLine(i);                
+                }
+
+                foreach(var i in dadosAgendamento){
+                    Console.WriteLine(i);                
+                }
+
+                Console.WriteLine("Cadastrar Pacientes? 1-Sim, 0-Não ");
+                addPaciente = int.Parse(Console.ReadLine());
+            
+            }
+            
+            }
         }
     }
 }

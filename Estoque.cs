@@ -19,6 +19,7 @@ class Estoque: Vacina
    }
 
    public void verificarEstoque(List<Vacina> lista,string nome_vacina){
+
        foreach(var element in lista)
        {
            if(element.nomeVacina == nome_vacina){
@@ -48,7 +49,7 @@ class Estoque: Vacina
 
        foreach(var element in lista)
        {
-           if(element.dataValidade >= thisDay){
+           if(thisDay > element.dataValidade){
               Console.WriteLine("Essa vacina passou do prazo de validade!!");
 
            }
@@ -57,7 +58,4 @@ class Estoque: Vacina
    
    }
    
-   /*public void verificarRetiradas(){
-
-    }*/
 }

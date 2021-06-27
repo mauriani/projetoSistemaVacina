@@ -1,10 +1,16 @@
 
 using System;
-class Agendamento: Vacina{
+class Agendamento: Paciente{
 
   public Agendamento(){}
 
-  public string dataVacinacao { get; set; }
+
+  
+  string nome_completo;
+
+  public string paciente {get; set;}
+
+  public DateTime dataVacinacao { get; set; }
 
   public string local { get; set; }
 
