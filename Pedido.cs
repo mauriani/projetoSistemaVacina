@@ -6,8 +6,7 @@ class Pedido: Estoque
   public string investimento {get; set;}
 
     public void verificarEstoque(){
-
-
+      
     }
 
     public void verificarQuantsUsada(){

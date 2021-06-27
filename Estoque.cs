@@ -32,8 +32,6 @@ class Estoque: Vacina
 
    public void verificarFaltas(List<Vacina> lista){
 
-       List<Object> faltas  = new List<Object>();
-
        foreach(var element in lista)
         {
            if(element.quantidade <= 0){
