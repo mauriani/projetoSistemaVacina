@@ -23,6 +23,7 @@ class Funcionario {
 
   public override string ToString(){
     return 
+     "\n" + "Dados funcionario cadastrado" +"\n"+
     "Codigo funcionário: " + this.codigo_funcionario + "\n" +
     "CRM: " + this.crm + "\n" +
     "CRB: "+ this.crb + "\n" +

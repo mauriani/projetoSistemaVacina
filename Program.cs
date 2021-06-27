@@ -244,13 +244,21 @@ namespace sistemaVacina
             
             }
 
-            Console.WriteLine("Deseja pesquisar algum paciente, informe o nome por favor?");
-            string pac_name = Console.ReadLine();
+            Console.WriteLine("Deseja pesquisar algum paciente 1- sim 0- Não");
+            int pesquisar = int.Parse(Console.ReadLine());
+            if(pesquisar == 1){
+                Console.WriteLine("Informe o nome do Paciente");
+                string pac_name = Console.ReadLine();
 
-            agendamento.buscarDadosPaciente(listaPacientes, pac_name);
+                agendamento.buscarDadosPaciente(listaPacientes, pac_name);
 
-            agendamento.buscarDadosAgendamento(dadosAgendamento, pac_name);
+                agendamento.buscarDadosAgendamento(dadosAgendamento, pac_name);
 
+                agendamento.verificarDose(listaPacientes, pac_name);
+
+
+            }
+            
            
             
         }

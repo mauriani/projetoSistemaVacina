@@ -42,8 +42,8 @@ class Vacina {
     "Tem efeitos colaterais: " + this.efeitosColaterais + "\n" +
     "Reações Alergicas: " + this.reacoesAlergicas + "\n" +
     "Quantidades: " +  this.quantidade + "\n" +
-    "Mes de Cadastro" + this.mes + "\n" +
-    "Ano de Cadastro" + this.ano;
+    "Mes de Cadastro: " + this.mes + "\n" +
+    "Ano de Cadastro: " + this.ano;
   }
 
 

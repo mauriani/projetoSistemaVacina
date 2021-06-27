@@ -36,9 +36,10 @@ class Agendamento: Paciente{
     foreach(var element in lista){
       try{
          if(element.paciente == nome){
-          Console.Write("Nome Paciente "+ element.nome +"\n" + 
-          "Data de vacinação " + element.dataVacinacao + "\n" + 
-          "Local " + element.local
+          Console.Write(
+          "Nome Paciente - "+ element.paciente +"\n" + 
+          "Data de vacinação - " + element.dataVacinacao + "\n" + 
+          "Local - " + element.local + "\n"
           );
       }
 
@@ -53,7 +54,7 @@ class Agendamento: Paciente{
      foreach(var element in lista)
        {
            if(element.nome == nome){
-             Console.WriteLine("Essa é a dose n°" + element.dose + "Do Paciente " + element.nome);
+             Console.WriteLine("Essa é a dose n° " + element.dose + " do(a) Paciente " + element.nome);
 
            }
            else {

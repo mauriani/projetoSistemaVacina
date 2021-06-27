@@ -25,6 +25,8 @@ class Estoque: Vacina
            if(element.nomeVacina == nome_vacina){
               Console.WriteLine("Existem " + element.quantidade + " vacinas no estoque.");
 
+           }else {
+               Console.WriteLine("Verifique o nome da vacina digitada, nome inválido !");
            }
         }     
      
