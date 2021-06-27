@@ -19,6 +19,8 @@ namespace sistemaVacina
             Historico historico = new Historico();
 
             Agendamento agendamento = new Agendamento();
+
+            Paciente paciente = new Paciente();
            
 
            while(addVacina == 1){
@@ -103,13 +105,15 @@ namespace sistemaVacina
            estoque.verificarVencidas(listVacinas);
 
            // historico
-
            historico.maisAplicadasMes(listVacinas);
+
 
             Console.WriteLine("Cadastrar Funcionário? 1-Sim, 0-Não ");
             int addFuncionario = int.Parse(Console.ReadLine());
 
             List<Funcionario> listaFuncionarios  = new List<Funcionario>();
+
+            List<Paciente> listaPacientes  = new List<Paciente>();
            
 
            while(addFuncionario == 1){
@@ -163,7 +167,7 @@ namespace sistemaVacina
            Console.WriteLine("Cadastrar Pacientes? 1-Sim, 0-Não ");
            int addPaciente = int.Parse(Console.ReadLine());
            
-           List<Paciente> listaPacientes  = new List<Paciente>();
+           
            
 
            while(addPaciente == 1){
@@ -239,6 +243,16 @@ namespace sistemaVacina
             }
             
             }
+
+            Console.WriteLine("Deseja pesquisar algum paciente, informe o nome por favor?");
+            string pac_name = Console.ReadLine();
+
+            agendamento.buscarDadosPaciente(listaPacientes, pac_name);
+
+            agendamento.buscarDadosAgendamento(dadosAgendamento, pac_name);
+
+           
+            
         }
     }
 }

@@ -43,6 +43,8 @@ class Historico: Vacina
         foreach(var item in aplicadasAno){
             if(aplicadasAno.Count > 0){
                 Console.WriteLine(item);
+            }else {
+                throw new System.ArgumentException("Lista de mais aplicadas encontar-se vazia");
             }
         }
     }

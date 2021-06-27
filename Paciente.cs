@@ -1,5 +1,6 @@
 
 using System;
+using System.Collections.Generic;
 class Paciente {
 
   public Paciente(){}
@@ -33,16 +34,28 @@ class Paciente {
     "E-mail: " + this.email + "\n" +
     "Telefone: " + this.telefone + "\n";
   }
+  public string historicoDevacinacao (){
+    // exibir nome da vacina e dose
+    return (
+      "Cartão de Vacina: " + this.numeroCartaoVacina + "\n" +
+     "Nome completo: " + this.nome + "\n" +
+     "Nome da vacina: " + this.vacina + "\n" +
+     "Dose: " + this.dose
 
-  public void buscarDadosAgendamento (){}
-
-  public void historicoDevacinacao (){}
-
-
-  public void verificarDose(){
-
+    );
+    
   }
-  public void marcarOutraAplicacao(){}
+
+
+ 
+  public void marcarOutraAplicacao(){
+    if(this.dose == 1){
+      Console.WriteLine("Precisa-se agendar a segunda dose");
+    }
+    else if(this.dose == 2){
+      return; 
+    }
+  }
  
 
 }

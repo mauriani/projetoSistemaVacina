@@ -1,13 +1,10 @@
 
 using System;
+using System.Collections.Generic;
+
 class Agendamento: Paciente{
 
   public Agendamento(){}
-
-
-  
-  string nome_completo;
-
   public string paciente {get; set;}
 
   public DateTime dataVacinacao { get; set; }
@@ -24,8 +21,45 @@ class Agendamento: Paciente{
     "Aplicação por: "+ this.aplicacaoFuncionario + "\n" ;
   }
 
-  public void buscarDadosPaciente (){}
+  public void buscarDadosPaciente (List<Paciente> lista, string nome){
+    foreach(var element in lista)
+       {
+           if(element.nome == nome){
+              Console.WriteLine(element);
 
-  public void buscarDadosFuncionario (){}
+           }
+        }  
+  }
 
+
+  public void buscarDadosAgendamento(List<Agendamento> lista, string nome){
+    foreach(var element in lista){
+      try{
+         if(element.paciente == nome){
+          Console.Write("Nome Paciente "+ element.nome +"\n" + 
+          "Data de vacinação " + element.dataVacinacao + "\n" + 
+          "Local " + element.local
+          );
+      }
+
+      }catch(ArgumentException){
+         throw new System.ArgumentException("O nome informado é inválido, informe um nome válido por favor.");
+      }
+     
+    }
+  }
+
+   public void verificarDose(List<Paciente> lista, string nome){
+     foreach(var element in lista)
+       {
+           if(element.nome == nome){
+             Console.WriteLine("Essa é a dose n°" + element.dose + "Do Paciente " + element.nome);
+
+           }
+           else {
+             throw new System.ArgumentException("O nome informado é inválido, informe um nome válido por favor.");
+           }
+        }  
+
+  }
 }
