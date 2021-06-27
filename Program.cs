@@ -97,15 +97,32 @@ namespace sistemaVacina
                estoque.verificarEstoque(listVacinas,nome);
 
            }
+           
+           Console.WriteLine("Deseja verificar vencidas ? 1- sim, 0 - não?");
+           int vencidas = int.Parse(Console.ReadLine());
 
-           // verificar faltas
-           estoque.verificarFaltas(listVacinas);
+           if(vencidas == 1){
+            // verificar vencidas
+            estoque.verificarVencidas(listVacinas);
 
-           // verificar vencidas
-           estoque.verificarVencidas(listVacinas);
+           }
+           
+           Console.WriteLine("Deseja verificar faltas ? 1- sim, 0 - não?");
+           int faltas = int.Parse(Console.ReadLine());
 
-           // historico
-           historico.maisAplicadasMes(listVacinas);
+           if(faltas == 1){
+            // verificar vencidas
+            estoque.verificarFaltas(listVacinas);
+            
+            }
+
+            Console.WriteLine("Deseja verificar as mais aplicadas ? 1- sim, 0 - não?");
+           int aplicadas = int.Parse(Console.ReadLine());
+
+            if(aplicadas == 1){
+                // historico
+                historico.maisAplicadasMes(listVacinas);
+            }
 
 
             Console.WriteLine("Cadastrar Funcionário? 1-Sim, 0-Não ");

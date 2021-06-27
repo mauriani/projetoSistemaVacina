@@ -1,20 +1,12 @@
 using System;
-class Pedido
+class Pedido: Estoque
 {
-   private int investimento;
 
-   public Pedido(int capital){
-     investimento = capital;
-   }
-   public void setInvestimento(int capital){
-     investimento = capital;
-    }
 
-     public int getInvestimento(){
-       return investimento;
-    }
+  public string investimento {get; set;}
 
     public void verificarEstoque(){
+
 
     }
 

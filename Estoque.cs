@@ -25,8 +25,6 @@ class Estoque: Vacina
            if(element.nomeVacina == nome_vacina){
               Console.WriteLine("Existem " + element.quantidade + " vacinas no estoque.");
 
-           }else {
-               Console.WriteLine("Verifique o nome da vacina digitada, nome inválido !");
            }
         }     
      
@@ -41,6 +39,8 @@ class Estoque: Vacina
            if(element.quantidade <= 0){
                Console.WriteLine("A vacina " + element.nomeVacina + "está em falta, faça um novo pedido");
 
+           } else {
+               Console.WriteLine("Não tem vacina em falta no momento!");
            }
         }    
      
@@ -52,7 +52,7 @@ class Estoque: Vacina
        foreach(var element in lista)
        {
            if(thisDay > element.dataValidade){
-              Console.WriteLine("Essa vacina passou do prazo de validade!!");
+              Console.WriteLine("A vacina " + element.nomeVacina + " passou do prazo de validade!!");
 
            }
         } 
